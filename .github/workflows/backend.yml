@@ -22,7 +22,7 @@ jobs:
                 username: ec2-user
                 port: ${{ secrets.EC2_PORT }}
                 key: ${{ secrets.EC2_SSH_KEY }}
-                source: "fashion-backend"
+                source: "fashion-backend/"
                 target: "/home/ec2-user/backend"
 
             - name: SSH and deploy Docker container
@@ -33,7 +33,7 @@ jobs:
                 port: ${{ secrets.EC2_PORT }}
                 key: ${{ secrets.EC2_SSH_KEY }}
                 script: |
-                  cd /home/ec2-user/backend
+                  cd /home/ec2-user/backend/fashion-backend
                   docker stop backend || true
                   docker rm backend || true
                   docker build -t backend .
