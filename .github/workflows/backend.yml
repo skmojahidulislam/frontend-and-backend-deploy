@@ -2,7 +2,10 @@ name: Deploy Backend to EC2
 
 on:
     push:
-        branches: [ main ]
+        paths:
+            - "fashion-backend/**"
+        branches:
+            - main
 
 jobs:
     deploy:
