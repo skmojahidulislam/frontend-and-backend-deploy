@@ -8,7 +8,7 @@ app.use(cors());
 app.get('/api/products', (req, res) => {
   res.json({
     products: [
-      { name: 'Kurta' },
+      { name: 'Kurtas' },
       { name: 'T-shirt' },
       { name: 'Shoes' },
       { name: 'Sandals' },
