@@ -4,7 +4,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://13.202.201.32/8000/api/products") // 🔗 will change to ECS URL later
+    fetch("https://fashionbbsr.shop/api/products") // 🔗 will change to ECS URL later
       .then(res => res.json())
       .then(data => setProducts(data.products))
       .catch(err => console.error("Error:", err));
