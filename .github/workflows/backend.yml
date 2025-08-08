@@ -19,22 +19,23 @@ jobs:
               uses: appleboy/scp-action@v0.1.4
               with:
                 host: ${{ secrets.EC2_HOST }}
-                username: ec2-user
+                username: ubuntu
                 port: ${{ secrets.EC2_PORT }}
                 key: ${{ secrets.EC2_SSH_KEY }}
                 source: "fashion-backend/"
-                target: "/home/ec2-user/backend"
+                target: "/home/ubuntu/backend"
 
             - name: SSH and deploy Docker container
               uses: appleboy/ssh-action@v0.1.10
               with:
                 host: ${{ secrets.EC2_HOST }}
-                username: ec2-user
+                username: ubuntu
                 port: ${{ secrets.EC2_PORT }}
                 key: ${{ secrets.EC2_SSH_KEY }}
                 script: |
-                  cd /home/ec2-user/backend/fashion-backend
+                  cd /home/ubuntu/backend/fashion-backend
                   docker stop backend || true
                   docker rm backend || true
                   docker build -t backend .
-                  docker run -d -p 7000:7000 --name backend backend
+                  docker run -d -p 8000:8000 --name backend backend
+                  docker image prune -f
