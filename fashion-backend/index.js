@@ -9,7 +9,7 @@ app.get('/api/products', (req, res) => {
   res.json({
     products: [
       { name: 'Kurtas' },
-      { name: 'T-shirt' },
+      { name: 'T-shirts' },
       { name: 'Shoes' },
       { name: 'Sandals' },
     ]
