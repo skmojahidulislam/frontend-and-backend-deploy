@@ -13,6 +13,7 @@ function App() {
   return (
     <div>
       <h1>🧥 Fashion BBSR Products Cateogery & 50% Disscount</h1>
+      <h2>Choose Your Cateogery and Explore all Products</h2>
       <ul>
         {products.map((item, i) => <li key={i}>{item.name}</li>)}
       </ul>
