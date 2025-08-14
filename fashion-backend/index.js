@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 9000;
 const JWT_SECRET = process.env.JWT_SECRET || 'dev_secret_change_me';
 
-const CORS_ORIGIN = process.env.CORS_ORIGIN || 'http://localhost:9000';
+const CORS_ORIGIN = process.env.CORS_ORIGIN || 'https://fashionbbsr.shop';
 app.use(cors({ origin: CORS_ORIGIN, credentials: true }));
 app.use(express.json());
 

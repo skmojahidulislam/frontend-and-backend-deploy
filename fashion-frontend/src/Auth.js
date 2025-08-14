@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Alert, ToggleButtonGroup, ToggleButton, Spinner } from 'react-bootstrap';
 
-const API_BASE = 'http://localhost:9000';
+const API_BASE = 'https://fashionbbsr.shop';
 
 export default function Auth({ onAuthed }) {
   const [mode, setMode] = useState('login'); // 'login' | 'signup'

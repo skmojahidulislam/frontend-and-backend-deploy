@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Spinner, Button, Navbar, Nav } from 'react-bootstrap';
 import Auth from './Auth';
 
-const API_BASE = 'http://localhost:9000';
+const API_BASE = 'https://fashionbbsr.shop';
 
 function App() {
   const [products, setProducts] = useState([]);
